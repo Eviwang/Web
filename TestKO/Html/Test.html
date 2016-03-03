@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+</head>
+<body>
+<!--<input data-bind="value:name" type="text"/>
+<span data-bind="text:name"></span>
+<input data-bind="value:age"/>-->
+
+    <input data-bind="value:firstName" type="text" />
+    <span data-bind="text:lastName"></span>
+    <span data-bind="text:fullName"></span>
+
+
+
+
+
+<script src="../js/knockout-3.4.0.js"></script>
+<script type="text/javascript">
+    var vm = {
+        name : ko.observable("haha"),
+        age : ko.observable(3),
+    };
+   // ko.applyBindings(vm);
+
+    var Person = function() {
+        var self = this;
+        self.firstName = ko.observable("a");
+        self.lastName = ko.observable("b");
+        self.fullName = ko.computed(function () {
+            return self.firstName() + self.lastName();
+        });
+    }
+    var p = new Person();
+    ko.applyBindings(p);
+</script>
+</body>
+</html>

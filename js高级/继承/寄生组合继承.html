@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        
+        function CreateObject(o) {
+            function F() { };
+            F.prototype = o;
+            return new F();
+        }
+        function inherit(subFunc,supFunc) {
+            var prototype = Object.create(supFunc.prototype);
+            prototype.constructor = supFunc;
+            subFunc.prototype = prototype;
+        }
+
+        function supFunc(name) {
+            this.name = name;
+            this.color = ["A","B"];
+        }
+
+        function subFunc(name,age) {
+            supFunc.call(this, name);
+            this.age = age;
+        }
+        
+        inherit(subFunc, supFunc);
+        //subFunc.prototype = new supFunc();
+
+        subFunc.prototype.sayHello = function () {
+            console.log("i'm " + this.name + ",my age:" + this.age);
+        };
+        var s1 = new subFunc("ming", 12);
+        s1.color.push("C");
+        var s2 = new subFunc();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

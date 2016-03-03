@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+</head>
+<body>
+<div id="div1">
+    <p><span>Hello</span>World!</p>
+</div>
+
+    <script>
+        var rang = document.createRange();
+        var oDiv = document.getElementById("div1");
+        var hello = oDiv.firstElementChild.firstElementChild.firstChild;
+        var world = oDiv.firstElementChild.lastChild;
+
+        /*
+        rang.setStart(hello, 2);
+        rang.setEnd(world, 2);
+        rang.deleteContents();
+        */
+        var span = document.createElement("span");
+        span.style.backgroundColor = "red";
+        rang.selectNode(hello);
+        rang.surroundContents(span);
+    </script>
+</body>
+</html>

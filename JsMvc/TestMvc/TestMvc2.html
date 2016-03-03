@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<span bind="Hour"></span> : <span bind="Minute"></span> : <span bind="Second"></span>
+    
+<script>
+    function Model(value) {
+        this._value = value;
+        this._listeners = [];
+    }
+
+    Model.prototype.set = function(value) {
+        this._value = value;
+
+        this._listeners.forEach(function(func) {
+            func.call(this, value);
+        });
+    }
+
+    Model.prototype.watch = function(listener) {
+        this._listeners.push(listener);
+    };
+    Model.prototype.bind = function(node) {
+        this.watch(function(value) {
+            node.innerHTML = value;
+        });
+    }
+
+    function Controler(callback) {
+        var models = [];
+        var views = document.querySelectorAll("[bind]");
+        views = Array.prototype.slice.call(views, 0);
+        views.forEach(function(view) {
+            var bindName = view.getAttribute("bind");
+            models[bindName] = models[bindName] || new Model();
+            models[bindName].bind(view);
+        });
+
+        callback.call(this, models);
+    }
+
+    var control = new Controler(function (models) {
+        function setTime() {
+            var date = new Date();
+            models["Hour"].set(date.getHours());
+            models["Minute"].set(date.getMinutes());
+            models["Second"].set(date.getSeconds());
+        };
+        setTime();
+        setInterval(setTime, 1000);
+    });
+
+</script>
+</body>
+</html>

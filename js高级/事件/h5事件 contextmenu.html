@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+</head>
+<body>
+    <div style="height: 1000px; border: solid 1px black;"></div>
+    <div id="div1" style="border: solid 20px red; width: 300px; height: 300px;"></div>
+    <script>
+        var div1 = document.getElementById("div1");
+        div1.addEventListener("contextmenu", function () {
+            console.log("contextmenu");
+            event.preventDefault();
+        });
+        
+    </script>
+</body>
+</html>

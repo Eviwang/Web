@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <input type="text" data-bind="hasfocus:isSelect" />
+<span data-bind="visible:isSelect">this msg</span>
+
+<script src="../js/knockout-3.4.0.js"></script>
+    <script>
+        var viewModel = {
+            isSelect:ko.observable(false)
+        };
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        window.onload = function() {
+            var table = document.createElement("table");
+            table.width = "100";
+            table.border = 1;
+
+            var tbody = document.createElement("tbody");
+            table.appendChild(tbody);
+
+            var tr1 = tbody.insertRow(0); //返回插入的行
+            tr1.insertCell(0).appendChild(document.createTextNode("A"));
+            tr1.insertCell(1).appendChild(document.createTextNode("B"));
+
+            var tr2 = tbody.insertRow(1);
+            tr2.insertCell(0).appendChild(document.createTextNode("C"));
+            tr2.insertCell(1).appendChild(document.createTextNode("D"));
+
+            document.body.appendChild(table);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+</head>
+<body>
+
+<ul data-bind="foreach:{data:students,as:'stu'}">
+    <li>
+        <span data-bind="text:stu.name"></span>
+        <ul data-bind="foreach:{data:dogs,as:'dog'}">
+            <li data-bind="text:dog"></li>
+        </ul>
+    </li>
+</ul>
+
+
+<script src="../js/knockout-3.4.0.js"></script>
+    <script>
+        var viewModel = {
+            students: ko.observableArray([
+                { name: "A", age: 1, dogs: ["dA", "dB"] },
+                { name: "B", age: 1, dogs: ["dBB", "dBB"] },
+                { name: "C", age: 1, dogs: ["dCc", "dcC"] }
+            ])
+        };
+
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        function vQuery() {
+            return new vQuery.prototype.init();
+        };
+
+        vQuery.prototype = {
+            init: function () {
+                console.log(this);
+                this.test = "a";
+                return this;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

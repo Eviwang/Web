@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            border: solid 1px red;
+        }
+
+        #div1 {
+            padding: 20px;
+            border: black 1px solid;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        #div2 {
+            margin: 20px;
+        }
+    </style>
+    <style>
+    </style>
+
+</head>
+<body>
+    <div id="bgDiv" style="width: 1000px; height: 1000px; background: green;"></div>
+    <div id="div1">
+        <div style="height: 300px">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div id="div2">test</div>
+    </div>
+
+    <script>
+        var body = document.body;
+        var filter = {
+            acceptNode:function(node) {
+                return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+            }
+        }
+        var it = document.createNodeIterator(body, NodeFilter.SHOW_ELEMENT, null, false);
+        var node = it.nextNode();
+        while (node != null) {
+            console.log(node.tagName);
+            node = it.nextNode();
+        }
+
+    </script>
+</body>
+</html>

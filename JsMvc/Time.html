@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    
+<span bind="hour"></span> : <span bind="minute"></span> : <span bind="second"></span>
+
+<script src="mvc.js"></script>
+<script>
+   
+    // controller:
+    new Controller(function (models) {
+        function setTime() {
+            var date = new Date();
+            models.hour.set(date.getHours());
+            models.minute.set(date.getMinutes());
+            models.second.set(date.getSeconds());
+        }
+        setTime();
+        setInterval(setTime, 1000);
+    });
+</script>
+</body>
+</html>

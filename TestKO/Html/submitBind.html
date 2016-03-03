@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<form data-bind="submit:doSomething">
+    test
+    <input type="submit"/>
+</form>
+
+    <script src="../js/knockout-3.4.0.js"></script>
+<script>
+    var vm = {
+        doSomething: function(e) {
+            console.log(e);
+        }
+    };
+    ko.applyBindings(vm);
+</script>
+</body>
+</html>

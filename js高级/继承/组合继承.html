@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function PersonBase(name) {
+            this.name = name;
+            this.color = [1, 2, 3];
+        }
+
+        function Person(name,age) {
+            PersonBase.call(this, name);
+            this.age = age;
+        }
+        Person.prototype = new PersonBase();
+
+        Person.prototype.sayHello = function() {
+            console.log("i'm" + this.name + "," + this.age);
+        };
+
+        var p1 = new Person("A", 12);
+        p1.color.push(4);
+        console.log(p1.color);
+        var p2 = new Person("B", 13);
+        console.log(p2.color);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    
+    
+</head>
+<body>
+
+    <script>
+
+        /*
+        window.onload = function() {
+            var elm = document.createElement("div");
+            var txt = document.createTextNode("hello word!");
+            elm.appendChild(txt);
+            document.body.appendChild(elm);
+        }
+        */
+
+        function loadScript(url) {
+            var script = document.createElement("script");
+            script.src = url;
+            document.head.appendChild(script);
+        }
+
+        loadScript("a.js");
+    </script>
+
+</body>
+</html>

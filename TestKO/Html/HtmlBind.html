@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="tDiv" data-bind="html:show" style="border: solid 1px #000; width: 300px; height: 300px;">
+        testfds
+    </div>
+    <script src="../knockout-3.4.0.js"></script>
+<script>
+    var viewModle = {
+        show: ko.observable()
+    };
+    ko.applyBindings(viewModle);
+
+    var oDiv = document.getElementById("tDiv");
+    oDiv.onclick = function () {
+        viewModle.show("<span>test</span>");
+    };
+    
+</script>
+</body>
+</html>

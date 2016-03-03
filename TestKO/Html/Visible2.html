@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<div data-bind="visible:isShowMsg().length>0">
+    test
+</div>
+<script src="../knockout-3.4.0.js"></script>
+<script>
+    var viewModle = {
+        isShowMsg: ko.observableArray([])
+    };
+    ko.applyBindings(viewModle);
+</script>
+</body>
+</html>

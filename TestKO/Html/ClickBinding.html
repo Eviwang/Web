@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+     You've clicked
+    <span data-bind="text: numberOfClicks"></span> times
+    <button data-bind="click: incrementClickCounter">Click me</button>
+</div>
+    <script src="../knockout-3.4.0.js"></script>
+<script type="text/javascript">
+    var viewModel = {
+        numberOfClicks: ko.observable(0),
+        incrementClickCounter: function() {
+            var previousCount = this.numberOfClicks();
+            this.numberOfClicks(previousCount + 1);
+        }
+    };
+    ko.applyBindings(viewModel);
+</script>
+
+
+</body>
+</html>

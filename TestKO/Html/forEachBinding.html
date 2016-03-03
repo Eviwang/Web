@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<ul data-bind="foreach:names">
+    <li>
+        School:<span data-bind="text:$parent.school"></span>
+        Name:<span data-bind="text:$data"></span>
+    </li>
+</ul>
+
+<!--ko-->
+    School:<span data-bind="text:$parent.school"></span>
+<!--/ko-->
+
+<script src="../js/knockout-3.4.0.js"></script>
+<script>
+    var viewModel = {
+        school: "CS",
+        names: ["A", "B", "C"]
+    };
+    ko.applyBindings(viewModel);
+</script>
+</body>
+</html>

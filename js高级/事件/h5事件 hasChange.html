@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+</head>
+<body>
+<div id="test">test</div>
+<div style="height: 1000px; border: solid 1px black;"></div>
+
+<a href="#test">goto test</a>
+<div id="div1" style="border: solid 20px red; width: 300px; height: 300px;"></div>
+<script>
+    var div1 = document.getElementById("div1");
+    window.addEventListener("hashchange", function () {
+
+        console.log(decodeURI(event.newURL));
+    });
+
+</script>
+</body>
+</html>

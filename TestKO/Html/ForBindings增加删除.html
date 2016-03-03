@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach:students">
+        <tr>
+            <td data-bind="text:name"></td>
+            <td data-bind="text:age"></td>
+            <td><button data-bind="click:$parent.addStu" type="button">Add</button></td>
+            <td><button data-bind="click:$parent.removeStu" type="button">Del</button></td>
+            <td data-bind="text:$index"></td>
+        </tr>
+    </tbody>
+</table>
+<script src="../js/knockout-3.4.0.js"></script>
+<script>
+    var viewModel = function() {
+        var self = this;
+        self.students = ko.observableArray([
+            { name: "A", age: "1" },
+            { name: "B", age: "2" },
+            { name: "C", age: "3" },
+            { name: "D", age: "4" }
+        ]);
+        self.addStu = function() {
+            self.students.push({
+                name: "QQ",
+                age: "1"
+            });
+            console.log(self.students);
+        };
+        self.removeStu = function() {
+            self.students.remove(this);
+        };
+    };
+    ko.applyBindings(new viewModel());
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        
+        function CreateAnother(o) {
+            var other = Object.create(o);
+            other.sayHello = function() {
+                console.log("hello");
+            }
+            return other;
+        };
+
+
+        var person = {
+            name: "A",
+            color: [1, 2, 3]
+        };
+        var p1 = CreateAnother(person);
+        p1.color.push(4);
+        var p2 = CreateAnother(person);
+        console.log(p1.color);
+        console.log(p2.color);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<input type="text" data-bind="value:formatPrice"/>
+<span data-bind = "text:price"></span>
+
+<script src="../knockout-3.4.0.js"></script>
+<script>
+    var viewModel = function() {
+        var self = this;
+        this.price = ko.observable(123);
+        this.formatPrice = ko.computed({
+            read: function () {
+                var originPrice = self.price();
+                self.price("$" + originPrice);
+                return originPrice;
+            },
+            write: function(value) {
+                var formatValue = parseFloat(value.replace(/[^\.\d]/g, "")).toFixed(2);
+                self.price(formatValue);
+            }
+    });
+    };
+
+    ko.applyBindings(new viewModel());
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+</head>
+<body>
+    <div style="height: 1000px; border: solid 1px black;"></div>
+    <div id="div1" style="border: solid 20px red; width: 300px; height: 300px;"></div>
+    <script>
+        var div1 = document.getElementById("div1");
+        window.addEventListener("beforeunload", function () {
+            console.log(event.returnValue);
+            var msg = "确定？";
+            event.returnValue = msg;
+            return msg;
+        });
+        
+    </script>
+</body>
+</html>

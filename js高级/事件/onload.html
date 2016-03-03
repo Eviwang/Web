@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<div id="div1">
+    <img data-src="../img/4.jpg" src="../img/1.jpg"/>
+</div>
+
+<script>
+    /*
+    var div1 = document.getElementById("div1");
+    var img = document.createElement("img");
+    img.addEventListener("load", function() {
+        alert("加载完成");
+    });
+    div1.appendChild(img);
+    img.src = "../img/1.jpg";
+    */
+    window.onload = function() {
+        var imgs = document.images;
+        alert("test");
+        for (var i = 0, len = imgs.length; i < len; i++) {
+            imgs[i].src = imgs[i].dataset.src;
+        }
+    }
+</script>
+</body>
+</html>

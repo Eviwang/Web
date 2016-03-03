@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        * {margin: 0px;padding: 0px;}
+
+        div {
+            border: solid 1px red;
+            float: left;
+        }
+
+
+
+    </style>
+    <style>
+        
+    </style>
+
+</head>
+<body>
+   
+    <div id="div2">test</div>
+    <script>
+        var div2 = document.getElementById("div2");
+        div2.style.cssText = "width:300px; height:300px;";
+        console.log(div2.style.cssText);
+        div2.style.removeProperty("width");
+        console.log(div2.style.cssText);
+    </script>
+</body>
+</html>

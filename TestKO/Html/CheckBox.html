@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<input type="checkbox" data-bind="checked:isSelect"/>
+<div data-bind="visible:isSelect">
+    <input type="checkbox" value="A" data-bind="checked:checkData"/>
+    <input type="checkbox" value="B" data-bind="checked:checkData"/>
+</div>
+<button value = "Add" data-bind="click:add">aaa</button>
+
+<script src="../js/knockout-3.4.0.js"></script>
+<script>
+    var viewModel = {
+        isSelect: ko.observable(false),
+        checkData: ko.observableArray(["A","B"]),
+        add: function () {
+            
+            var r = (Math.random() * 1000 + "").substring(0,2);
+            console.log(r);
+            this.checkData.push(r);
+        }
+    };
+    ko.applyBindings(viewModel);
+</script>
+</body>
+</html>

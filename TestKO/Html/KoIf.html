@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<input type="checkbox" data-bind="checked:isShowMsg"/>
+<div data-bind="if:isShowMsg">
+    This is Msg
+</div>
+<script src="../js/knockout-3.4.0.js"></script>
+<script>
+    var viewModel = {
+        isShowMsg: ko.observable(true)
+    };
+    ko.applyBindings(viewModel);
+</script>
+</body>
+</html>

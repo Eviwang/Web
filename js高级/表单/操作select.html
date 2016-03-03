@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+</head>
+<body>
+
+    <form method="POST">
+        <select name="city">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+    </form>
+    <div id="div1" style="width: 100px; height: 100px; border: solid 1px red;"></div>
+
+    <script>
+        var form = document.forms[0];
+        var select = form.elements[0];
+
+        console.log(select);
+
+        select.addEventListener("change", function() {
+            var target = event.target;
+            var text = target.options[target.selectedIndex].text;
+            var value = target.options[target.selectedIndex].value;
+            console.log("change,text:"+text+";value:"+value);
+        });
+
+        document.getElementById("div1").addEventListener("click", function () {
+            var option = document.createElement("option");
+            option.text = "Test";
+            option.value = "Test";
+            select.add(option);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<ul data-bind="foreach:students">
+    <li data-bind="text:name"></li>
+    <li data-bind="if:dogs">
+        <!--ko foreach:dogs-->
+        <span data-bind="text:$data"></span>
+        <!--/ko-->
+    </li>
+</ul>
+
+
+<script src="../js/knockout-3.4.0.js"></script>
+    <script>
+        var viewModel = {
+            students: [
+                { name: "A", dogs: ["a","b"] },
+                { name: "B", dogs: null },
+                { name: "C", dogs: null }
+            ]
+        };
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        /*
+        function sum(s) {
+            if (s===0) {
+                return s;
+            } else {
+                return s + sum(s-1);
+            }
+        }
+
+        console.log(sum(5));
+        */
+
+        var sum = function sum(s) {
+            if (s === 0) {
+                return s;
+            } else {
+                return s + sum(s - 1);
+            }
+        };
+
+        var test = sum;
+        sum = null;
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

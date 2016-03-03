@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<ul data-bind="foreach:data">
+    <li data-bind="text:name"></li>
+    <li data-bind="text:age"></li>
+</ul>
+
+<script src="../knockout-3.4.0.js"></script>
+<script>
+    var viewModle = {
+        data: [
+        {
+            name: "A",
+            age:3
+        },
+        {
+            name: "A",
+            age: 3
+        },
+        {
+            name: "A",
+            age: 3
+        }
+        ]
+    };
+    ko.applyBindings(viewModle);
+</script>
+</body>
+</html>

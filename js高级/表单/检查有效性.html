@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+</head>
+<body>
+
+<form method="POST">
+    <input type="text" pattern="\d+" name="search"/>
+    <input type="submit"/>
+</form>
+    <div id="div1" style="width: 100px; height: 100px; border: solid 1px red;"></div>
+
+    <script>
+        var form = document.forms[0];
+        var search = form.elements[0];
+        var div1 = document.getElementById("div1");
+        div1.addEventListener("click", function() {
+            console.log(search.checkValidity());
+        });
+    </script>
+</body>
+</html>

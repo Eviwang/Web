@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function PersonBase() {
+            this.color = [1, 2, 3];
+        }
+
+        function Person(name) {
+            this.name = name;
+        };
+
+        Person.prototype = new PersonBase();
+
+
+        var p1 = new Person("A");
+        p1.color.push(4);
+
+        var p2 = new Person("B");
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

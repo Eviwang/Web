@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+</head>
+<body>
+
+    <form method="POST">
+        <input type="text" pattern="\d+" name="search" />
+        <input type="submit" />
+    </form>
+
+    <script>
+        var form = document.forms[0];
+        var search = form.elements[0];
+//        search.addEventListener("select", function() {
+//            console.log(search.value.substring(search.selectionStart,search.selectionEnd));
+//        });
+        var ev = null;
+        search.addEventListener("copy", function (event) {
+            ev = event.clipboardData;
+            event.clipboardData.setData("text", "哈哈");
+            console.log(event.clipboardData.getData("text"));
+        });
+    </script>
+</body>
+</html>

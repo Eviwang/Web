@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <span bind="Hour"></span>:<span bind="Minute"></span>:<span bind="Second"></span>
+    
+<script>
+    function Model(value) {
+        this._value = value;
+        this._listeners = [];
+    }
+
+    Model.prototype.set = function (value) {
+        var self = this;
+        this._value = value;
+
+        this._listeners.forEach(function(listener) {
+            listener.call(self,value);
+        });
+    };
+
+    Model.prototype.watch = function(listener) {
+        this._listeners.push(listener);
+    };
+
+    Model.prototype.bind = function(node) {
+        this.watch(function (value) {
+            node.innerHTML = toDoubleNum(value);
+        });
+    };
+
+    function Controller(callback) {
+        var models = [];
+        var nodes = document.querySelectorAll("[bind]");
+        nodes = Array.prototype.slice.call(nodes, 0);
+        nodes.forEach(function(item,index,array) {
+            var nodeName = item.getAttribute("bind");
+            models[nodeName] = models[nodeName] || new Model();
+            models[nodeName].bind(item);
+        });
+        callback.call(this,models);
+    };
+
+    var control = new Controller(function (models) {
+        function setTime() {
+            var date = new Date();
+            models["Hour"].set(date.getHours());
+            models["Minute"].set(date.getMinutes());
+            models["Second"].set(date.getSeconds());
+        }
+        setTime();
+        setInterval(setTime, 1000);
+    });
+
+    function toDoubleNum(num) {
+        num = "" + num;
+        if (num.length<2) {
+            return "0" + num;
+        } else {
+            return num;
+        }
+    };
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        function Object(o) {
+            function F() {};
+            F.prototype = o;
+            return new F();
+        }
+
+        var person = {
+            name: "A",
+            color: [1, 2, 3]
+        };
+
+        var p1 = Object(person);
+        p1.color.push(4);
+        console.log(p1.color);
+        var p2 = Object(person);
+        console.log(p2.color);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
