@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        function Base(name) {
+            if (this instanceof Base) {
+                this.name = name;
+                this.sayHello = function() {
+                    console.log("hello");
+                };
+            } else {
+                return new Base(name);
+            };
+        };
+
+        function Person(name,age) {
+            Base.call(name);
+            this.age = age;
+            this.colors = [1, 2];
+        }
+
+        Person.prototype = new Base();
+        var p1 = new Person("A",10);
+        p1.sayHello();
+        var p2 = new Person("B", 20);
+        p2.colors.push(3);
+        console.log(p1.sayHello === p2.sayHello);
+
+        
+    </script>
+</body>
+</html>

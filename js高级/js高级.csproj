@@ -105,6 +105,10 @@
     <Content Include="表单\操作select.html" />
     <Content Include="表单\检查有效性.html" />
     <Content Include="表单\表单.html" />
+    <Content Include="高级技巧\函数绑定.html" />
+    <Content Include="高级技巧\安全的构造函数.html" />
+    <Content Include="高级技巧\惰性载入.html" />
+    <Content Include="高级技巧\继承.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="asp\Json.ashx.cs">

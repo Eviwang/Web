@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        function Base(name) {
+            this.name = name;
+        }
+
+        function Person(name,age) {
+            Base.call(name);
+            this.age = age;
+        }
+
+        Person.prototype = new Base();
+        var p1 = new Person("A",10);
+        console.log(p1 instanceof Person);
+        console.log(p1 instanceof Base);
+    </script>
+</body>
+</html>
