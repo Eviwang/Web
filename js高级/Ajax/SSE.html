@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="msg" style="border: solid 1px red;"></div>
+    <script>
+        var msg = document.getElementById("msg");
+        var source = new EventSource("../asp/SSE.ashx");
+        source.onmessage = function(event) {
+            var data = event.data;
+            msg.innerHTML = data;
+        }
+    </script>
+</body>
+</html>

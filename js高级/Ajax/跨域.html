@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+
+</head>
+<body>
+    <form method="POST" action="../asp/json.ashx">
+        <input name="name" type="text" />
+        <input name="age" type="number" />
+        <input type="submit" />
+    </form>
+
+    <audio controls="controls" style="position: absolute; right: 20px; top: 20px;">
+        <source src="../mv/like.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+
+    <script>
+        var form = document.forms[0];
+        form.addEventListener("submit", function () {
+            event.preventDefault();
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                        alert("提交成功");
+                    }
+                } else {
+
+                }
+            };
+            xhr.open("get", "http://54.254.197.242/RecurringWo/Exterior/index", true);
+            xhr.send(null);
+            //返回重定向，说明是没有带cookie的，因为我已经登录了
+        });
+    </script>
+</body>
+</html>

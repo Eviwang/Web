@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ajax\FormData.html" />
+    <Content Include="Ajax\One.html" />
+    <Content Include="Ajax\SSE.html" />
+    <Content Include="Ajax\跨域.html" />
     <Content Include="callee.html" />
     <Content Include="Canvas\One.html" />
     <Content Include="css\cssText.html" />
@@ -74,6 +78,7 @@
     <Content Include="Dom\遍历.html" />
     <Content Include="img\1.jpg" />
     <Content Include="img\4.jpg" />
+    <Content Include="mv\like.mp3" />
     <Content Include="vQuery\vQuery.html" />
     <Content Include="Web.config" />
     <Content Include="事件\Dom2事件.html" />
@@ -102,9 +107,18 @@
     <Content Include="表单\表单.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="asp\Json.ashx.cs">
+      <DependentUpon>Json.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="asp\Person.cs" />
+    <Compile Include="asp\SSE.ashx.cs">
+      <DependentUpon>SSE.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asp\Json.ashx" />
+    <Content Include="asp\SSE.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

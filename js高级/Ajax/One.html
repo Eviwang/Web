@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    
+</head>
+    <body>
+        
+        <!--<video autoplay="autoplay"  controls="controls" width="300" height="250" style="position: absolute; right: 20px; top: 20px;">
+            <source src="../mv/mm.mp4" type="video/mp4">
+            <source src="../mv/mm.mp4" type="video/mp4">
+            <source src="../mv/my.wmv">
+        </video>-->
+        <audio controls="controls" style="position: absolute; right: 20px; top: 20px;">
+            <source src="../mv/like.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <div id="txt" style="width:300px; height: 300px; border: solid red 1px ;"></div>
+        <div id="txtHeard"></div>
+        <button id="btnRequest" value="获取数据">获取数据</button>
+        <script>
+            var txtDiv = document.getElementById("txt");
+            var txtHeard = document.getElementById("txtHeard");
+            var btnRequest = document.getElementById("btnRequest");
+            var xhr = new XMLHttpRequest();//xhr.abort()取消
+            btnRequest.addEventListener("click", function () {
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 302) {
+                            txtDiv.innerHTML = JSON.stringify(JSON.parse(xhr.responseText), null, 4);
+                            console.log(xhr.getAllResponseHeaders());
+                        } else {
+                            txtDiv.innerHTML = "加载失败";
+                        }
+                    } else {
+                        txtDiv.innerHTML = "loading...";
+                    }
+                }
+                xhr.open("get", "../asp/Json.ashx", true);
+                xhr.send(null);
+                
+            } );
+           
+
+
+        </script>
+    </body>
+</html>
