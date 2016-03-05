@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    
+    
+</head>
+<body>
+    <button id="btn">Test</button>
+    
+    <script>
+        var btn = document.getElementById("btn");
+
+        function bind(fn,context) {
+            var arg = Array.prototype.slice.call(arguments, 2);
+            return function() {
+                var innerArgs = Array.prototype.slice.call(arguments);
+                var finalArgs = arg.concat(innerArgs);
+                return fn.apply(context, finalArgs);
+            };
+        };
+
+        var hander = {
+            message: "hello",
+            click: function(name) {
+                console.log(this.message + ":" + event.type + name);
+            }
+        };
+
+        btn.addEventListener("click",bind(hander.click,hander,"test"));
+    </script>
+</body>
+</html>

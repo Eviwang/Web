@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <button id="btn">Test</button>
+    <script>
+        var hander = {
+            message: "event hander",
+            click: function(event) {
+                alert(this.message+event.target);
+            }
+        };
+        var btn = document.getElementById("btn");
+
+
+        btn.addEventListener("click", hander.click);//undefined 因为等价于下面的方式
+//        btn.addEventListener("click", function (event) {
+//            alert(this.message);
+        //        });
+
+        //正确姿势
+        btn.addEventListener("click", hander.click.bind(hander));
+    </script>
+</body>
+</html>

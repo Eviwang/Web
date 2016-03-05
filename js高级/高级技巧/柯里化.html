@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    
+    
+    <script>
+        function add(num,num2) {
+            return num + num2;
+        }
+
+        function curry(fn) {
+            var arg = Array.prototype.slice.call(arguments, 1);
+            return function() {
+                var innerArgs = Array.prototype.slice.call(arguments);
+                var finalArgs = arg.concat(innerArgs);
+                return fn.apply(null,finalArgs);
+            }
+        }
+
+        console.log(curry(add,3,6)());
+    </script>
+</body>
+</html>

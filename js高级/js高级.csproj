@@ -108,6 +108,8 @@
     <Content Include="高级技巧\函数绑定.html" />
     <Content Include="高级技巧\安全的构造函数.html" />
     <Content Include="高级技巧\惰性载入.html" />
+    <Content Include="高级技巧\柯里化.html" />
+    <Content Include="高级技巧\柯里化bind.html" />
     <Content Include="高级技巧\继承.html" />
   </ItemGroup>
   <ItemGroup>
