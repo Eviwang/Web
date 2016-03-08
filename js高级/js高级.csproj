@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ajax\FormData.html" />
+    <Content Include="Ajax\One.html" />
+    <Content Include="Ajax\SSE.html" />
+    <Content Include="Ajax\跨域.html" />
     <Content Include="callee.html" />
     <Content Include="Canvas\One.html" />
     <Content Include="css\cssText.html" />
@@ -77,6 +81,7 @@
     <Content Include="H5\拖放.html" />
     <Content Include="img\1.jpg" />
     <Content Include="img\4.jpg" />
+    <Content Include="mv\like.mp3" />
     <Content Include="vQuery\vQuery.html" />
     <Content Include="Web.config" />
     <Content Include="事件\Dom2事件.html" />
@@ -103,13 +108,28 @@
     <Content Include="表单\操作select.html" />
     <Content Include="表单\检查有效性.html" />
     <Content Include="表单\表单.html" />
+    <Content Include="高级技巧\函数绑定.html" />
+    <Content Include="高级技巧\安全的构造函数.html" />
+    <Content Include="高级技巧\惰性载入.html" />
+    <Content Include="高级技巧\柯里化.html" />
+    <Content Include="高级技巧\柯里化bind.html" />
+    <Content Include="高级技巧\继承.html" />
     <Content Include="错误与调试\imgError.html" />
     <Content Include="错误与调试\test.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="asp\Json.ashx.cs">
+      <DependentUpon>Json.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="asp\Person.cs" />
+    <Compile Include="asp\SSE.ashx.cs">
+      <DependentUpon>SSE.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asp\Json.ashx" />
+    <Content Include="asp\SSE.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
