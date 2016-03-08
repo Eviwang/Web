@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<div id="div1" draggable="true" style="width: 300px; height: 300px; border: solid 1px red; background: cyan"></div>
+    <img src="../img/1.jpg" width="50" height="50"/>
+    <div id="div2" draggable="true" style="width: 300px; height: 300px; border: solid 1px red; background: green"></div>
+    
+
+<script>
+    var div1 = document.getElementById("div1");
+    var div2 = document.getElementById("div2");
+    div1.addEventListener("dragstart", function() {
+        console.log("dragstart");
+        event.dataTransfer.setData("text", "123");
+        console.log(event.dataTransfer.getData("text"));
+    });
+    div1.addEventListener("drag", function () {
+        console.log("drag");
+    });
+    div1.addEventListener("dragend", function () {
+        console.log("dragend");
+        var data = event.dataTransfer.getData("text");
+        console.log(data);
+    });
+
+    div2.addEventListener("dragdrop", function () {
+        event.preventDefault();
+        console.log("dragdrop");
+        var data = event.dataTransfer.getData("text");
+        console.log(data);
+    });
+
+
+</script>
+
+</body>
+</html>

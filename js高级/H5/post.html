@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<iframe id="fram" width="300" height="300" src="receiveMessage.html">
+
+</iframe>
+
+<script>
+    var fram = document.getElementById("fram");
+    var contentWindow = fram.contentWindow;
+    contentWindow.postMessage("test", "*");
+
+
+    window.addEventListener("message",function() {
+        console.log(event.data);
+    });
+</script>
+</body>
+</html>

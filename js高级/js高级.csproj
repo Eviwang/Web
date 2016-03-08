@@ -72,6 +72,9 @@
     <Content Include="Dom\Table.html" />
     <Content Include="Dom\动态js.html" />
     <Content Include="Dom\遍历.html" />
+    <Content Include="H5\post.html" />
+    <Content Include="H5\receiveMessage.html" />
+    <Content Include="H5\拖放.html" />
     <Content Include="img\1.jpg" />
     <Content Include="img\4.jpg" />
     <Content Include="vQuery\vQuery.html" />
@@ -100,6 +103,8 @@
     <Content Include="表单\操作select.html" />
     <Content Include="表单\检查有效性.html" />
     <Content Include="表单\表单.html" />
+    <Content Include="错误与调试\imgError.html" />
+    <Content Include="错误与调试\test.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
