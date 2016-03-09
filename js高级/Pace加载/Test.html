@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="../themes/blue/pace-theme-flash.css" />
+    <script src="../Pace加载/pace.js"></script>
+
+    
+</head>
+<body>
+
+    <div id="div1" style="width: 500px; height: 300px; border: solid red 1px;"></div>
+    <button id="btn">加载</button>
+    <script>
+        Pace.on('hide', function () {
+            console.log('done');
+        });
+        var div1 = document.getElementById("div1");
+        var btn = document.getElementById("btn");
+        btn.onclick = function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if ((xhr.status >= 200 && xhr.status <= 300) || xhr.status === 302) {
+                        div1.innerHTML = xhr.responseText;
+                    }
+                } else {
+                    div1.innerHTML = "loading...";
+                }
+            }
+            xhr.open("get", "../asp/SSE.ashx");
+            xhr.send(null);
+        }
+       
+    </script>
+</body>
+</html>

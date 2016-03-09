@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<script>
+    var arr = [1, 2, 3];
+
+    function process(num) {
+        alert(num);
+    }
+
+    
+    function chunk(arr, func, context) {
+        setTimeout(function () {
+            var item = arr.shift();
+            func.call(context, item);
+            if (arr.length>0) {
+                setTimeout(arguments.callee, 1000);
+            }
+        },1000);
+    }
+
+    chunk(arr, process);
+</script>
+</body>
+</html>

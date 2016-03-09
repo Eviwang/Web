@@ -16,6 +16,7 @@ namespace js高级.asp
         public void ProcessRequest(HttpContext context)
         {
 
+            Thread.Sleep(1000);
             context.Response.ContentType = "text/plain";
             var listp = new List<Person>()
             {
