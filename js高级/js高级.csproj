@@ -276,6 +276,7 @@
   <ItemGroup>
     <Content Include="asp\Json.ashx" />
     <Content Include="asp\SSE.ashx" />
+    <Content Include="Doc\JavaScript高级程序设计（第3版）中文 高清 完整.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
