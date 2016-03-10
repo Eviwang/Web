@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        function EventTarget() {
+            this.handlers = {};
+        }
+
+        EventTarget.prototype = {
+            constructor: EventTarget,
+            addHandler: function(type, handler) {
+                if (typeof this.handlers[type] === "undefined") {
+                    this.handlers[type] = [];
+                }
+                this.handlers[type].push(handler);
+            },
+            fire: function(event) {
+                if (typeof event.target === "undefined") {
+                    event.target = this;
+                }
+                var handlers = this.handlers[event.type];
+                for (var i = 0; i < handlers.length; i++) {
+                    handlers[i].call(this, event);
+                }
+            },
+            remove:function(type,handler) {
+                if (this.handlers[type] instanceof Array) {
+                    var handlers = this.handlers[type];
+                    var index = -1;
+                    for (var i = 0,len = handlers.length; i < len; i++) {
+                        if (handlers[i] === handler) {
+                            index = i;
+                            break;
+                        }
+                    }
+                    if (index!==-1) {
+                        this.handlers[type].splice(index, 1);
+                    }
+                }
+            }
+        };
+
+        function sayHello(event) {
+            console.log("hello",event.message);
+        }
+
+        var ev = new EventTarget();
+        ev.addHandler("sayHello", sayHello);
+        ev.fire({ type: "sayHello", message: "HaHa" });
+
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

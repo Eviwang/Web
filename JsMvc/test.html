@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div style="margin: 50px auto; position: relative; width: 500px;">
+    <div id="div1" style="font-size: 18px;">
+
+    </div>
+    <div id="arr" style="position: absolute; top: 2px;">__</div>    
+</div>
+
+
+<script>
+    "use strict";
+    var str = "所以哈撒比斯的目标是，借鉴人脑的能力，开发出首款“通用型学习机”，能像生物一样自主学习并掌握技能.";
+    var div1 = document.getElementById("div1");
+    var arr = document.getElementById("arr");
+    setInterval(function() {
+        if (arr.style.display === "none") {
+            arr.style.display = "block";
+        } else {
+            arr.style.display = "none";
+        }
+    }, 200);
+
+    for (let i = 0,j=0; i < str.length; i++) {
+
+        setTimeout(function() {
+            div1.innerHTML += str[i];
+
+            if (arr.offsetLeft>500) {
+                arr.style.left = 0;
+                arr.style.top = parseInt(arr.style.top)+18 + "px";
+            }
+            arr.style.left = (18 * (i + 1)) + "px";
+        }, i * 200);
+    }
+</script>
+</body>
+</html>

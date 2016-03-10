@@ -84,6 +84,8 @@
     <Content Include="mv\like.mp3" />
     <Content Include="Pace加载\pace.js" />
     <Content Include="Pace加载\Test.html" />
+    <Content Include="ReView\MVC.html" />
+    <Content Include="ReView\自定义事件.html" />
     <Content Include="themes\black\pace-theme-barber-shop.css" />
     <Content Include="themes\black\pace-theme-big-counter.css" />
     <Content Include="themes\black\pace-theme-bounce.css" />

@@ -71,6 +71,7 @@
   <ItemGroup>
     <Content Include="jq\jq.html" />
     <Content Include="mvc.js" />
+    <Content Include="test.html" />
     <Content Include="TestMVC.js" />
     <Content Include="TestMvc\testJsTagPosition.html" />
     <Content Include="TestMvc\testMvc.html" />
