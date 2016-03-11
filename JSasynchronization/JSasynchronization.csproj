@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48003C8E-91FA-46F8-950D-8B90269761DB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JSasynchronization</RootNamespace>
+    <AssemblyName>JSasynchronization</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\App.config" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\bin\Debug\WinForms.exe.config" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\bin\Debug\WinForms.vshost.exe.config" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\bin\Debug\WinForms.vshost.exe.manifest" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\obj\Debug\WinForms.csproj.GenerateResource.Cache" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\obj\Debug\WinForms.csprojResolveAssemblyReference.cache" />
+    <None Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Properties\Settings.settings" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms.v12.suo" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\App.config" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\bin\Debug\WinForms.exe.config" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\bin\Debug\WinForms.vshost.exe.config" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\bin\Debug\WinForms.vshost.exe.manifest" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\WinForms.csproj.GenerateResource.Cache" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\WinForms.csprojResolveAssemblyReference.cache" />
+    <None Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Properties\Settings.settings" />
+    <Content Include="asynchronization\3 MusicBox\Display.c" />
+    <Content Include="asynchronization\3 MusicBox\Display.h" />
+    <Content Include="asynchronization\3 MusicBox\EntryPoint.c" />
+    <Content Include="asynchronization\3 MusicBox\Keyboard.c" />
+    <Content Include="asynchronization\3 MusicBox\Keyboard.h" />
+    <Content Include="asynchronization\3 MusicBox\Music.c" />
+    <Content Include="asynchronization\3 MusicBox\Music.h" />
+    <Content Include="asynchronization\3 MusicBox\Music0.h" />
+    <Content Include="asynchronization\3 MusicBox\Music1.h" />
+    <Content Include="asynchronization\3 MusicBox\Music10.h" />
+    <Content Include="asynchronization\3 MusicBox\Music11.h" />
+    <Content Include="asynchronization\3 MusicBox\Music12.h" />
+    <Content Include="asynchronization\3 MusicBox\Music13.h" />
+    <Content Include="asynchronization\3 MusicBox\Music14.h" />
+    <Content Include="asynchronization\3 MusicBox\Music15.h" />
+    <Content Include="asynchronization\3 MusicBox\Music2.h" />
+    <Content Include="asynchronization\3 MusicBox\Music3.h" />
+    <Content Include="asynchronization\3 MusicBox\Music4.h" />
+    <Content Include="asynchronization\3 MusicBox\Music5.h" />
+    <Content Include="asynchronization\3 MusicBox\Music6.h" />
+    <Content Include="asynchronization\3 MusicBox\Music7.h" />
+    <Content Include="asynchronization\3 MusicBox\Music8.h" />
+    <Content Include="asynchronization\3 MusicBox\Music9.h" />
+    <Content Include="asynchronization\3 MusicBox\MusicContent.h" />
+    <Content Include="asynchronization\3 MusicBox\PreDefines.h" />
+    <Content Include="asynchronization\3 MusicBox\SerialPort.c" />
+    <Content Include="asynchronization\3 MusicBox\SerialPort.h" />
+    <Content Include="asynchronization\3 MusicBox\System.h" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\App.config" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\bin\Debug\WinForms.exe.config" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\bin\Debug\WinForms.vshost.exe.config" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\bin\Debug\WinForms.vshost.exe.manifest" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\WinForms.csproj.GenerateResource.Cache" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\WinForms.csprojResolveAssemblyReference.cache" />
+    <None Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Properties\Settings.settings" />
+    <Content Include="asynchronization\8 C++ CON\C++ Coroutines - Gor Nishanov - CppCon 2015.pdf" />
+    <Content Include="asynchronization\8 C++ CON\n4134.pdf" />
+    <Content Include="asynchronization\9 ES7 async await\babel\.babelrc" />
+    <Content Include="asynchronization\9 ES7 async await\babel\package.json" />
+    <Content Include="asynchronization\The ultimate form of asynchronization - coroutine.pptx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29.html" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\default.css" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\functions.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\jquery.min.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\jscex-async-powerpack.min.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\jscex-async.min.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\jscex-builderbase.min.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\jscex-jit.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\jscex-parser.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\jscex.min.js" />
+    <Content Include="asynchronization\1 Love Story\闫木木与蒋莲莲的爱情故事%28Our Love Story%29_files\love.js" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms.sln" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\bin\Debug\WinForms.exe" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\bin\Debug\WinForms.pdb" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\bin\Debug\WinForms.vshost.exe" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\obj\Debug\WinForms.csproj.FileListAbsolute.txt" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\obj\Debug\WinForms.exe" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\obj\Debug\WinForms.pdb" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\WinForms.csproj" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms.sln" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\bin\Debug\WinForms.exe" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\bin\Debug\WinForms.pdb" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\bin\Debug\WinForms.vshost.exe" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\WinForms.csproj.FileListAbsolute.txt" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\WinForms.exe" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\WinForms.pdb" />
+    <Content Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\WinForms.csproj" />
+    <Content Include="asynchronization\4 Javascript Synchronous\Busy waiting.html" />
+    <Content Include="asynchronization\5 Javascript Asynchronous\setTimeout Promise ADV.html" />
+    <Content Include="asynchronization\5 Javascript Asynchronous\setTimeout Promise.html" />
+    <Content Include="asynchronization\5 Javascript Asynchronous\setTimeout StateMachine.html" />
+    <Content Include="asynchronization\5 Javascript Asynchronous\setTimeout Trivial.html" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms.sln" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\bin\Debug\WinForms.exe" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\bin\Debug\WinForms.pdb" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\bin\Debug\WinForms.vshost.exe" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\WinForms.csproj.FileListAbsolute.txt" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\WinForms.exe" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\WinForms.pdb" />
+    <Content Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\WinForms.csproj" />
+    <Content Include="asynchronization\7 Yield Example\await.png" />
+    <Content Include="asynchronization\7 Yield Example\Yield.exe" />
+    <Content Include="asynchronization\7 Yield Example\Yield.gif" />
+    <Content Include="asynchronization\7 Yield Example\yield.png" />
+    <Content Include="asynchronization\8 C++ CON\status.txt" />
+    <Content Include="asynchronization\9 ES7 async await\babel\1.html" />
+    <Content Include="asynchronization\9 ES7 async await\babel\1.js" />
+    <Content Include="asynchronization\9 ES7 async await\babel\1.out.js" />
+    <Content Include="asynchronization\9 ES7 async await\babel\runtime.js" />
+    <Content Include="asynchronization\9 ES7 async await\setTimeout Promise.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Form1.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Program.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Properties\AssemblyInfo.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Properties\Resources.Designer.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Properties\Settings.Designer.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Form1.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Program.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Properties\AssemblyInfo.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Properties\Resources.Designer.cs" />
+    <Compile Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Properties\Settings.Designer.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Form1.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Program.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Properties\AssemblyInfo.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Properties\Resources.Designer.cs" />
+    <Compile Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Properties\Settings.Designer.cs" />
+    <Compile Include="asynchronization\7 Yield Example\Yield.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\obj\Debug\WinForms.Form1.resources" />
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\obj\Debug\WinForms.Properties.Resources.resources" />
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 1\WinForms\Properties\Resources.resx" />
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\WinForms.Form1.resources" />
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\WinForms.Properties.Resources.resources" />
+    <EmbeddedResource Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\Properties\Resources.resx" />
+    <EmbeddedResource Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\WinForms.Form1.resources" />
+    <EmbeddedResource Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\WinForms.Properties.Resources.resources" />
+    <EmbeddedResource Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="asynchronization\2 Thread.Sleep Form\WinForms 2\WinForms\obj\Debug\TempPE\" />
+    <Folder Include="asynchronization\6 C# coroutine\WinForms Coroutine\WinForms\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11518</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:11518/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

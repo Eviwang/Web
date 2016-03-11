@@ -1,0 +1,41 @@
+﻿<meta charset="utf-8" />
+<div id="ui1"></div>
+<div id="ui2"></div>
+<div id="ui3"></div>
+
+<script>
+    "use strict";
+
+    var ui1 = document.getElementById("ui1");
+    var ui2 = document.getElementById("ui2");
+    var ui3 = document.getElementById("ui3");
+    var text = "两个黄鹂鸣翠柳，一行白鹭上青天。";
+    showTextIn(ui1, text, 1000).then(function () {
+        showTextIn(ui3, text, 1000);
+    });
+    showTextIn(ui2, text, 2000);
+
+    function delayAsync(timeMs) {
+        return new Promise(function (resolover) {
+            setTimeout(function () {
+                resolover();
+            }, timeMs);
+        });
+    }
+
+    async function forEachAsync(range, action) {
+        var pos = 0;
+        for (var i = 0; i < range.length; ++i) {
+            await action(range[pos]);
+            pos += 1;
+        }
+    }
+
+    async function showTextIn(ui, text, allTime) {
+        ui.textContent = "";
+        await forEachAsync(text, async function (char) {
+            ui.textContent += char;
+            await delayAsync(allTime / text.length);
+        });
+    }
+</script>

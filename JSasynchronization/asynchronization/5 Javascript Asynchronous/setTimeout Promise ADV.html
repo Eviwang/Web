@@ -1,0 +1,100 @@
+﻿<meta charset="utf-8" />
+<div id="ui1"></div>
+<div id="ui2"></div>
+<div id="ui3"></div>
+
+<div id="ui4"></div>
+
+<script>
+    "use strict";
+
+    var ui1 = document.getElementById("ui1");
+    var ui2 = document.getElementById("ui2");
+    var ui3 = document.getElementById("ui3");
+    var ui4 = document.getElementById("ui4");
+
+    showTextIn(ui1, "[A]: This line will display in 1 second.", 1000).then(function () {
+        showTextIn(ui3, "[C]: This line will appears after [A] appears.", 1000);
+    });
+    showTextIn(ui2, "[B]: this line will latest for 2 seconds.", 2000);
+
+    showTextWithUnderscore(ui4, "[D]: this line underscore flashes.", 3000);
+
+    function showTextWithUnderscore(ui, text, allTime) {
+        var underscore = false;
+        var continues = true;
+        var myText = "";
+
+        function setText() {
+            ui.textContent = myText;
+            if (underscore) ui.textContent += "_";
+        }
+
+        doWhileAsync(function () {
+            return continues;
+        }, function () {
+            underscore = !underscore;
+            setText();
+            return delayAsync(50);
+        });
+
+        ui.textContent = "";
+        return forEachAsync(text, function (char) {
+            myText += char;
+            setText();
+            return delayAsync(allTime / text.length);
+        }).then(function () {
+            continues = false;
+        });
+    }
+
+    function delayAsync(timeMs) {
+        return new Promise(function (resolover) {
+            setTimeout(function () {
+                resolover();
+            }, timeMs);
+        });
+    }
+
+    function forEachAsync(range, action) {
+        var pos = 0;
+        return new Promise(function (resolover) {
+            function next() {
+                if (pos < range.length) {
+                    action(range[pos]).then(function () {
+                        pos += 1;
+                        next();
+                    });
+                } else {
+                    resolover();
+                }
+            }
+
+            next();
+        });
+    }
+
+    function doWhileAsync(pred, action) {
+        return new Promise(function (resolover) {
+            function next() {
+                if (pred()) {
+                    action().then(function () {
+                        next();
+                    });
+                } else {
+                    resolover();
+                }
+            }
+
+            next();
+        });
+    }
+
+    function showTextIn(ui, text, allTime) {
+        ui.textContent = "";
+        return forEachAsync(text, function (char) {
+            ui.textContent += char;
+            return delayAsync(allTime / text.length);
+        });
+    }
+</script>

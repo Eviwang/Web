@@ -1,0 +1,22 @@
+<meta charset="utf-8"></meta>
+<div id="ui"></div>
+
+<script>
+    "use strict";
+    
+    var ui = document.getElementById("ui");
+    var text = "两个黄鹂鸣翠柳，一行白鹭上青天。"
+    
+    setTimeout(function() {
+        ui.textContent = "";
+        for (var i = 0; i < text.length; ++i) {
+            ui.textContent += text[i];
+            sleep(200);
+        }
+        
+        function sleep(delay) {
+            var start = new Date().getTime();
+            while (new Date().getTime() < start + delay);
+        }
+    }, 0);
+</script>

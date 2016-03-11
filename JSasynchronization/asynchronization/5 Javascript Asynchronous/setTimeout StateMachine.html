@@ -1,0 +1,31 @@
+﻿<meta charset="utf-8" />
+<div id="ui"></div>
+
+<script>
+    "use strict";
+    
+    var ui = document.getElementById("ui");
+    var text = "两个黄鹂鸣翠柳，一行白鹭上青天。";
+    showTextIn(ui, text, 1000);
+    
+    function showTextIn(ui, text, allTime) {
+        let state = {
+            pos: 0
+        };
+
+        function init() {
+            ui.textContent = "";
+        }
+
+        function next() {
+            if (state.pos < text.length) {
+                ui.textContent += text[state.pos];
+                state.pos += 1;
+                setTimeout(next, allTime / text.length);
+            }
+        }
+
+        init();
+        next();
+    }
+</script>
